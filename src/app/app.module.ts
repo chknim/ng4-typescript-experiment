@@ -8,6 +8,7 @@ import { APP_IMPORTS } from './app.imports';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { MapModule } from './map/map.module';
 
 import { THEME_CONFIG, ThemeConfig } from '../themes/default/theme.config';
 
@@ -21,7 +22,8 @@ import { THEME_CONFIG, ThemeConfig } from '../themes/default/theme.config';
     FormsModule,
     HttpModule,
     RouterModule,
-    CoreModule
+    CoreModule,
+    MapModule
   ],
   providers: [{
     provide: THEME_CONFIG,
