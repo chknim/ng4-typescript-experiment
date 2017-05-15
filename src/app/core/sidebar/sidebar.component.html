@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <ul>
+    <li *ngFor="let entry of entries" [ngClass]="{selected: entry.id === selectedEntry}"
+      (click)="select($event, entry.id)">
+      <table><tr>
+        <td><span [ngClass]="{'color-green': entry.id === selectedEntry}"
+          class="frg-icon icon-user-profile-circled menu-icon"></span></td>
+        <td><span class="menu-title">{{entry.name}}</span></td>
+      </tr></table>
+    </li>
+  </ul>
+</div>
