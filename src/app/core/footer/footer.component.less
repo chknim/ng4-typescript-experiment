@@ -1,0 +1,46 @@
+@import '../../../themes/default/footer';
+
+footer {
+  position: fixed;
+  width: 100%;
+  min-width: 526px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 0;
+  background-color: @bg-color;
+  font-size: 12px;
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1000px;
+
+    .content {
+      ul {
+        list-style: none;
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: inline-block;
+          position: relative;
+          margin-right: 10px;
+
+          > a {
+            text-decoration: none;
+            background-color: transparent;
+            color: @connectlinks-text-color;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      color: @copyright-text-color;
+      margin-top: 10px;
+    }
+  }
+}
