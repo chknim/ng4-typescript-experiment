@@ -9,14 +9,35 @@ import { SidebarEntry } from '../models';
 })
 export class SidebarComponent implements OnInit {
   @Input('entries') entries: [SidebarEntry];
+  @Input('bgColor') bgColor: string;
+  @Input('textColor') textColor: string;
+  @Input('selectBgColor') selectBgColor: string;
+  @Input('selectTextColor') selectTextColor: string;
 
-  @Output('onSelect') onSelect: EventEmitter<string> = new EventEmitter<string>();
+  @Output('onEntrySelect') onEntrySelect: EventEmitter<string> = new EventEmitter<string>();
 
-  selectedEntry: string;
+  private selectedEntry: string;
 
   ngOnInit() {}
 
   select(event, id) {
     this.selectedEntry = id;
+    this.onEntrySelect.emit(id);
+  }
+
+  getEntryStyle(id): any {
+    const style = {};
+    if (id === this.selectedEntry) {
+      style['background-color'] = this.selectBgColor;
+      style['color'] = this.selectTextColor;
+    } else {
+      style['background-color'] = 'inherit';
+      style['color'] = this.textColor;
+    }
+    return style;
+  }
+
+  getEntryIcon(icon): any {
+    return 'glyphicon-' + icon;
   }
 }
