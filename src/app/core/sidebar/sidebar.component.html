@@ -1,0 +1,12 @@
+<div class="sidebar" [style.background-color]="bgColor">
+  <ul>
+    <li *ngFor="let entry of entries" [ngStyle]="getEntryStyle(entry.id)"
+      (click)="select($event, entry.id)">
+      <table><tr>
+        <td><span [ngClass]="getEntryIcon(entry.icon)"
+          class="glyphicon menu-icon"></span></td>
+        <td><span class="menu-title">{{entry.name}}</span></td>
+      </tr></table>
+    </li>
+  </ul>
+</div>

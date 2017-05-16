@@ -9,9 +9,9 @@ import { THEME_CONFIG, IThemeConfig } from '../../../themes/default/theme.config
 @Injectable()
 export class HeaderComponent implements OnInit {
   // Themable parameters
-  headerConfig;
-  logoUrl;
-  logoSrc;
+  private headerConfig;
+  private logoUrl;
+  private logoSrc;
 
   constructor(@Inject(THEME_CONFIG) private config: IThemeConfig) {
     this.headerConfig = config.header;

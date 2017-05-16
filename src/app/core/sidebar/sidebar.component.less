@@ -1,0 +1,65 @@
+:host {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+
+  .sidebar {
+    width: 240px;
+    height: 100%;
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+      padding-top: 20px;
+      margin-top: 0;
+
+      li {
+        padding: 15px 0;
+        cursor: pointer;
+
+        table {
+          width: 220px;
+        }
+
+        tr {
+          cursor: pointer;
+
+          &.selected {
+            background-color: #e2e2e2;
+          }
+        }
+
+        td:first-child {
+          width: 49px;
+          text-align: right;
+        }
+
+        .glyphicon {
+          font-size: 18px;
+          display: inline-block;
+          position: relative;
+        }
+
+        &.selected {
+          cursor: default;
+        }
+
+        .menu-label {
+          width: 135px;
+          height: 35px;
+        }
+      }
+    }
+
+    .menu-icon {
+      margin-right: 10px;
+    }
+
+    .menu-title {
+      font-size: 16px;
+      display: inline-block;
+      position: relative;
+      max-width: 150px;
+    }
+  }
+}

@@ -18,6 +18,17 @@ export interface IThemeConfig {
       name: string
     }]
   };
+  map: {
+    sidebar: {
+      bgColor: string,
+      textColor: string,
+      selectBgColor: string,
+      selectTextColor: string
+    },
+    main: {
+      bgColor: string
+    }
+  };
 }
 
 export const ThemeConfig: IThemeConfig = {
@@ -41,5 +52,16 @@ export const ThemeConfig: IThemeConfig = {
       url: '//www.linkedin.com/company/aviva-canada',
       name: 'LinkedIn'
     }]
+  },
+  map: {
+    sidebar: {
+      bgColor: '#014194',
+      textColor: 'white',
+      selectBgColor: '#f5f6f7',
+      selectTextColor: '#595959'
+    },
+    main: {
+      bgColor: '#014194'
+    }
   }
 };

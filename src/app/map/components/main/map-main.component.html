@@ -1,3 +1,8 @@
-<p>
-  main works!
-</p>
+<app-sidebar
+  [entries]="sidebarEntries"
+  [bgColor]="sidebarBgColor"
+  [textColor]="sidebarTextColor"
+  [selectBgColor]="sidebarSelectBgColor"
+  [selectTextColor]="sidebarSelectTextColor"
+  (onEntrySelect)="changeView($event)">
+</app-sidebar>
