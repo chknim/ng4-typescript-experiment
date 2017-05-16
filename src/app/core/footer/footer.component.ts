@@ -9,10 +9,10 @@ import { THEME_CONFIG, IThemeConfig } from '../../../themes/default/theme.config
 @Injectable()
 export class FooterComponent implements OnInit {
   // Themable parameters
-  footerConfig;
-  companyUrl;
-  connectLinks;
-  companyName;
+  private footerConfig;
+  private companyUrl;
+  private connectLinks;
+  private companyName;
 
   constructor(@Inject(THEME_CONFIG) private config: IThemeConfig) {
     this.footerConfig = config.footer;
