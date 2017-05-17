@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { MainHolderComponent } from './mainholder/main-holder.component';
+import { GoogleMapComponent } from './googlemap/google-map.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    MainHolderComponent,
+    GoogleMapComponent
   ],
   imports: [
     BrowserModule
@@ -17,7 +21,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    MainHolderComponent,
+    GoogleMapComponent
   ]
 })
 

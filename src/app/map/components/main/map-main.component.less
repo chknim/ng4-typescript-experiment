@@ -3,8 +3,36 @@
 :host {
   position: absolute;
   top: 71px;
-  bottom: 58px;
+  bottom: 64px;
   left: 0;
   right: 0;
   background-color: @bg-color;
+  min-width: 1000px;
+  min-height: 400px;
+
+  .map-container {
+    display: block;
+    position: absolute;
+    left: 240px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    .background {
+      margin: auto;
+      display: block;
+      position: relative;
+      top: 35%;
+      transform: translateY(-39%);
+      text-align: center;
+
+      .glyphicon {
+        font-size: 6.5rem;
+      }
+
+      h1 {
+        font-weight: normal;
+      }
+    }
+  }
 }

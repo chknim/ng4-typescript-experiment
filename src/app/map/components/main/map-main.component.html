@@ -6,3 +6,15 @@
   [selectTextColor]="sidebarSelectTextColor"
   (onEntrySelect)="changeView($event)">
 </app-sidebar>
+<div class="map-container">
+  <div *ngIf="!viewId" class="background">
+    <div class="glyphicon" [ngClass]="getWelcomeIcon()"></div>
+    <h1 class="greeting">{{welcomeMessage}}</h1>
+  </div>
+  <ng-container *ngFor="let entry of mapEntries">
+    <app-main-holder *ngIf="viewId === entry.id" [title]="entry.name">
+      <app-google-map [lat]="entry.lat" [lng]="entry.lng" [address]="entry.address">
+      </app-google-map>
+    </app-main-holder>
+  </ng-container>
+</div>
