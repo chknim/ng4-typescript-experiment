@@ -26,7 +26,9 @@ export interface IThemeConfig {
       selectTextColor: string
     },
     main: {
-      bgColor: string
+      bgColor: string,
+      bgText: string,
+      bgIcon: string
     }
   };
 }
@@ -61,7 +63,9 @@ export const ThemeConfig: IThemeConfig = {
       selectTextColor: '#595959'
     },
     main: {
-      bgColor: '#014194'
+      bgColor: '#014194',
+      bgText: 'Welcome to our map application!',
+      bgIcon: 'globe'
     }
   }
 };
