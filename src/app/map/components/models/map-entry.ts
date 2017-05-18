@@ -1,6 +1,6 @@
-export class MapEntry {
-  readonly name: string;
-  readonly id: string;
+import { SidebarEntry } from '../../../core/models';
+
+export class MapEntry extends SidebarEntry {
   readonly lat?: string;
   readonly lng?: string;
   readonly address?: string;
