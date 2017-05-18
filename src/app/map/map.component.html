@@ -1,3 +1,3 @@
-<app-header></app-header>
-<app-map-main></app-map-main>
-<app-footer></app-footer>
+<app-header *ngIf="hasFbConnected"></app-header>
+<app-map-main *ngIf="hasFbConnected"></app-map-main>
+<app-footer *ngIf="hasFbConnected"></app-footer>
