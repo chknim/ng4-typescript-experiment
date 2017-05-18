@@ -1,6 +1,6 @@
 # Ng4TypescriptExperiment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+An application that is integrated with Facebook's login and display themeable and configurable locations on Google Map.
 
 ## Reference a theme (Mandatory)
 Create a soft link name `default` under themes folder that points to a theme, e.g. `ln -s aviva default`.
