@@ -14,8 +14,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private location: Location,
-    private fb: FacebookService) {
-    }
+    private fb: FacebookService) { }
 
   ngOnInit() {
     this.fb.getLoginStatus()
