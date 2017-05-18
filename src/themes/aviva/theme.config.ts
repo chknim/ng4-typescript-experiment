@@ -1,42 +1,12 @@
 import { OpaqueToken } from '@angular/core';
+import { IThemeConfig } from '../theme-interface.config';
 
 export let THEME_CONFIG = new OpaqueToken('theme.config');
-
-export interface IThemeConfig {
-  header: {
-    logoUrl: string,
-    logoSrc: string
-  };
-  footer: {
-    companyName: string,
-    companyUrl: {
-      url: string,
-      name: string
-    },
-    connectLinks: [{
-      url: string,
-      name: string
-    }]
-  };
-  map: {
-    sidebar: {
-      bgColor: string,
-      textColor: string,
-      selectBgColor: string,
-      selectTextColor: string
-    },
-    main: {
-      bgColor: string,
-      bgText: string,
-      bgIcon: string
-    }
-  };
-}
 
 export const ThemeConfig: IThemeConfig = {
   header: {
     logoUrl: '/',
-    logoSrc: '/themes/default/assets/logo.png'
+    logoSrc: '/themes/aviva/assets/logo.png'
   },
   footer: {
     companyName: 'Aviva Canada',
@@ -66,6 +36,21 @@ export const ThemeConfig: IThemeConfig = {
       bgColor: '#014194',
       bgText: 'Welcome to our map application!',
       bgIcon: 'globe'
-    }
+    },
+    entries: [{
+      name: 'Current',
+      id: 'CURRENT',
+      icon: 'map-marker'
+    }, {
+      name: 'Markham',
+      id: 'MARKHAM',
+      icon: 'map-marker',
+      address: '7980 Birchmount Rd, Markham, ON L6G'
+    }, {
+      name: 'Scarborough',
+      id: 'SCARBOROUGH',
+      icon: 'map-marker',
+      address: '2206 Eglinton Ave E, Scarborough, ON M1L 4S8'
+    }]
   }
 };

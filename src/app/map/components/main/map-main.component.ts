@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, Injectable, HostBinding } from '@angular/core';
-import { THEME_CONFIG, IThemeConfig } from '../../../../themes/default/theme.config';
+import { THEME_CONFIG } from '../../../../themes/default/theme.config';
+import { IThemeConfig } from '../../../../themes/theme-interface.config';
 
 import { SidebarEntry } from '../../../core/models';
 import { MapEntry } from '../models';
@@ -31,19 +32,7 @@ export class MapMainComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sidebarEntries = [{
-      name: 'Current',
-      id: 'CURRENT',
-      icon: 'map-marker'
-    }, {
-      name: 'Markham',
-      id: 'MARKHAM',
-      icon: 'map-marker'
-    }, {
-      name: 'Scarborough',
-      id: 'SCARBOROUGH',
-      icon: 'map-marker'
-    }];
+    this.sidebarEntries = this.mapConfig.entries;
 
     this.sidebarBgColor = this.mapConfig.sidebar.bgColor;
     this.sidebarTextColor = this.mapConfig.sidebar.textColor;
@@ -52,18 +41,7 @@ export class MapMainComponent implements OnInit {
 
     this.welcomeMessage = this.mapConfig.main.bgText;
     this.welcomeIcon = this.mapConfig.main.bgIcon;
-    this.mapEntries = [{
-      name: 'Current',
-      id: 'CURRENT'
-    }, {
-      name: 'Markham',
-      id: 'MARKHAM',
-      address: '7980 Birchmount Rd, Markham, ON L6G'
-    }, {
-      name: 'Scarborough',
-      id: 'SCARBOROUGH',
-      address: '2206 Eglinton Ave E, Scarborough, ON M1L 4S8'
-    }];
+    this.mapEntries = this.mapConfig.entries;
   }
 
   getWelcomeIcon() {

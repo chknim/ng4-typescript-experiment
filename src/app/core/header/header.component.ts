@@ -1,5 +1,6 @@
 import { Component, OnInit, Injectable, Inject } from '@angular/core';
-import { THEME_CONFIG, IThemeConfig } from '../../../themes/default/theme.config';
+import { THEME_CONFIG } from '../../../themes/default/theme.config';
+import { IThemeConfig } from '../../../themes/theme-interface.config';
 
 @Component({
   selector: 'app-header',
